@@ -1,0 +1,54 @@
+<h2 class="sub-header">我的联系人</h2>
+<div class="table-responsive">
+  <!-- Single button -->
+  <div class="btn-group">
+    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      所有
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      <li>
+        <a>朋友</a>
+      </li>
+      <li>
+        <a>家人</a>
+      </li>
+      <li>
+        <a>公司</a>
+      </li>
+      <li>
+        <a>同学</a>
+      </li>
+      <li role="separator" class="divider"></li>
+      <li>
+        <a>Separated link</a>
+      </li>
+    </ul>
+  </div>
+  <a class="btn btn-success pull-right" routerLink="/contacts/new">新增联系人</a>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>姓名</th>
+        <th>邮箱</th>
+        <th>电话</th>
+        <th>标签</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of contacts;">
+        <td>{{ item.name }}</td>
+        <td>{{ item.email }}</td>
+        <td>{{ item.phone }}</td>
+        <td>
+          <span class="label label-info">朋友</span>
+        </td>
+        <td>
+          <a [routerLink]="['/contacts/edit', item.id]">编辑</a>
+          <a (click)="deleteContactById(item.id, $event)" href="#">删除</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

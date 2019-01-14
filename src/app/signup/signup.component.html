@@ -1,0 +1,47 @@
+<div class="container">
+  <form #form="ngForm" (submit)="signup()" class="form-signin">
+    <h2 class="form-signin-heading">Please sign up</h2>
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required
+      autofocus minlength="6" maxlength="18" [(ngModel)]="signupForm.email" #email="ngModel">
+    <!-- email 是有效的或者是干净的，这个div即错误提示消息被隐藏 -->
+    <!-- <div [hidden]="email.valid || email.pristine" class="alert-danger">email is required</div> -->
+    <!-- 当 email 是无效的并且不是干净的 -->
+    <!-- <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+      <div *ngIf="email.errors.required">
+        email is required.
+      </div>
+      <div *ngIf="email.errors.minlength">
+        email must be at least 6 characters long.
+      </div>
+      <div *ngIf="email.errors.maxlength">
+          email must be lower 18 characters long.
+      </div>
+    </div> -->
+      <!-- Angular 表单双向绑定会为绑定的元素绑定特殊的类名，这里输出看一下 -->
+      <!-- 可以根据这个规则添加想要添加的类名，具体看官方文档中的提供 -->
+      <!-- <p>{{ email.className }}</p> -->
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required
+       minlength="6" maxlength="18" [(ngModel)]="signupForm.password" #password="ngModel">
+      <!-- <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+          <div *ngIf="password.errors.required">
+            password is required.
+          </div>
+          <div *ngIf="password.errors.minlength">
+            password must be at least 6 characters long.
+          </div>
+          <div *ngIf="password.errors.maxlength">
+            password must be lower 18 characters long.
+          </div>
+      </div> -->
+      <div *ngIf="email_err_msg" class="alert alert-danger">
+        {{ email_err_msg }}
+      </div>
+    <!-- password 是有效的或者是干净的，这个div即错误提示消息被隐藏 -->
+    <!-- <div [hidden]="password.valid || password.pristine" class="alert-danger">password is required</div> -->
+    <!-- [disabled]="!form.form.valid" 当验证不成功的时候，不允许点击，整个语法参考官网 form 章节 -->
+    <button [disabled]="!form.form.valid" class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+  </form>
+  <p class="info"><a routerLink="/signin">Already have an account? Login here.</a></p>
+</div>

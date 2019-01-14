@@ -1,0 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('bootstrap/dist/css/bootstrap')
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
