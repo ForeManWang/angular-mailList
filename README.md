@@ -110,17 +110,17 @@ ng generate module app-routing --flat --module=app
 
 - 控制台显示如下
 
-![导入路由指令](assets\导入路由指令.png)
+![导入路由指令](/assets/导入路由指令.png)
 
 - 再去看看被创建的一个文件`app.routing.moudle.ts`和被更新的一个文件`app.module.ts`
 
 `app.routing.moudle.ts`
 
-![路由模块](assets\路由模块.png)
+![路由模块](/assets/路由模块.png)
 
 `app.module.ts`，可以看到下图文件被更新，自动的导入了我们所创建的组件
 
-![分发路由](assets\分发路由.png)
+![分发路由](/assets/分发路由.png)
 
 ### 配置路由表
 
@@ -166,7 +166,7 @@ const routes: Routes = [
 
 4. **添加路由出口：**去`app.component.html`内容更改为 `<router-outlet></router-outlet>`
 
-   ![添加路由出口](assets\添加路由出口.png)
+   ![添加路由出口](/assets/添加路由出口.png)
 
 5. **测试访问：**这样去访问`http://localhost:4200/signup`和`http://localhost:4200/signin`就可以正常访问了
 
@@ -548,7 +548,7 @@ signup() {
    1. 步骤 7 中实现的路由守卫拦截保护只适用于`contact-list`一个页面，而一个项目2中肯定不止这一个页面需要获取用户登录权限，这就涉及到很多页面需要获取到用户登录权限，这就用到了路由导航钩子
    2. 在`Angular.io`的官方文档中有一个`FUNDAMENTALS/Routing & Navigation`
 
-   ![路由守卫](assets\路由守卫.png)
+   ![路由守卫](/assets/路由守卫.png)
 
    3. 根据官方文档说明，在`app`文件夹下创建一个路由守卫文件`auth-guard.service.ts`
    4. 将下面的代码拷贝进去
