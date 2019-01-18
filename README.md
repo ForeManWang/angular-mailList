@@ -1,4 +1,12 @@
-# 通讯录
+# Angular通讯录
+
+用户通讯录管理系统
+
+## 技术
+
+组件：Angular
+
+接口：node
 
 ## 准备
 
@@ -414,7 +422,13 @@ export class SignupComponent implements OnInit {
 
 ### 接口文档
 
-**[Angular通讯录项目接口查看请点击这里](git@github.com:ForeManWang/angular-contacts-api.git)**
+**[Angular通讯录项目接口查看请点击这里](/angular-contacts-api/)**
+
+下载接口文档并启动接口服务
+
+```shell
+node app.js
+```
 
 ###路由
 
