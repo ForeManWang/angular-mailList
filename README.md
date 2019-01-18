@@ -48,11 +48,7 @@ ng g component tag-edit
 
 5. 导入模板
 
-**[Angular通讯录项目模板查看请点击这里](git@github.com:ForeManWang/angular-contacts-template.git)**
-
-这里用的是`angular-contacts-template`这个模板，这个是`github`上的开源项目，下载下来用就可以
-
-十个组件一样的套路：找到组件内的`html`，复制粘贴到对应的组件`html`文件中，导入样式，在`app.component.html`中引用对应标签即可
+**[Angular通讯录项目模板查看请点击这里](/template/)**（这里只是提供一套模板，当你需要发表自己的项目时，这个文件可以删除）
 
 这里以`signin`为例
 
@@ -422,7 +418,7 @@ export class SignupComponent implements OnInit {
 
 ### 接口文档
 
-**[Angular通讯录项目接口查看请点击这里](/angular-contacts-api/)**
+**[Angular通讯录项目接口查看请点击这里](/api/)**(只是提供接口用于测试，当你有自己的接口，这个文件夹可以直接删除)
 
 下载接口文档并启动接口服务
 
