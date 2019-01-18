@@ -1,0 +1,21 @@
+{
+  "name": "angular-contacts-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "blueimp-md5": "^2.10.0",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "json-server": "^0.12.1",
+    "jwt-simple": "^0.5.1",
+    "moment": "^2.20.1",
+    "parameter": "^2.2.1"
+  }
+}
